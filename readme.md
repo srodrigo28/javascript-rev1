@@ -5,9 +5,10 @@ https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-tratamento-de-err
 
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-manipulando-formularios
 
-* [1] Trabalhando com datas
+* [1] Trabalhando com datas *** finish ***
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-datas/aula/1/subaula/1
 
+* [1] Trabalhando com datas *** starting ***
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-funcoes/aula/1/subaula/1
 
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-armazenamento-no-navegador/
