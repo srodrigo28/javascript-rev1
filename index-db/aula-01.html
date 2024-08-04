@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexDB</title>
+</head>
+<body>
+    <h1>Treina Web</h1>
+    
+    <script>
+        let db;
+        const request = indexedDB.open('myDatabase', 1)
+
+        request.onerror = function (event){
+            console.log('Error ao abrir a conexao ' + event)
+        }
+
+        request.onsuccess = function (event){
+            db = event.target.result;
+            console.log('Conexão realizada com sucesso')
+        }
+
+        request.onupgradeneeded = function (event){
+            db = event.target.result;
+
+            const booksObjectStore = db.createObjectStore("books", { keyPath: 'isbn'});
+
+            booksObjectStore.createIndex('title', 'title', { unique: true  } );
+            booksObjectStore.createIndex('author', 'author', { unique: false } );
+
+            booksObjectStore.transaction.oncomplete = function(event){
+                const booksData = [
+                    { title: "Javascript", author: "Sebastião Rodrigo", isbn: "1" },
+                    { title: "Mysql", author: "Sebastião Rodrigo", isbn: "2" },
+                    { title: "PHP", author: "Sebastião Rodrigo", isbn: "3" }
+                ]
+
+                const booksStoreTransaction = db.transaction('books', 'readwrite');
+                const bookStore = booksStoreTransaction.objectStore('books');
+
+                booksData.forEach( function(book){
+                    bookStore.add(book) 
+                });
+            }
+        }
+    </script>
+</body>
+</html>
