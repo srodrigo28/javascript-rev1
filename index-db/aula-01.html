@@ -7,9 +7,13 @@
 </head>
 <body>
     <h1>Treina Web</h1>
+    <input type="button" value="buscar todos os livros" id="buscar">
+    <input type="button" value="Adicionar um livro"     id="adicionar">
     
     <script>
         let db;
+        const btnListar = document.querySelector("#buscar")
+        const btnAdicionar = document.querySelector("#adicionar")
         const request = indexedDB.open('myDatabase', 1)
 
         request.onerror = function (event){
@@ -18,7 +22,7 @@
 
         request.onsuccess = function (event){
             db = event.target.result;
-            console.log('Conexão realizada com sucesso')
+            // console.log('Conexão realizada com sucesso')
         }
 
         request.onupgradeneeded = function (event){
@@ -44,6 +48,64 @@
                 });
             }
         }
+
+        function getAllBooks(){
+            const transaction = db.transaction(['books'], 'readwrite');
+
+            const objectStore = transaction.objectStore('books');
+
+            const getAllRequest = objectStore.getAll();
+
+            getAllBooks.onsuccess = function(event) {
+                const books = event.target.result;
+                if(books){
+                    console.log(books);
+                }else{
+                    alert('Null :( ')
+                }
+            }
+            
+            getAllBooks.onerror = function(event) {
+                console.log('error ao tentar listar', event.target.error)
+            }
+        }
+    
+        function createBook(){
+            const transaction = db.transaction(['books'], 'readwrite');
+            
+            const objectStore = transaction.objectStore('books');
+            
+            const book = { title: "Bootstrap 76", author: "Sebastião Rodrigo", isbn: "76" }
+            const addReq = objectStore.add(book);
+
+            // verificar
+            if(addReq.onsuccess == null){
+                console.log('null')
+            }else{
+                console.log(addReq)
+            }
+
+            objectStore.onsuccess = function(event){
+                console.log("O livro foi adicionado com sucesso: ", event.target )
+            }
+            objectStore.onerror = function(event){
+                console.log("Error: ", event.target )
+            }
+        }
+        
+        btnListar.addEventListener("click", (e) => {
+            e.preventDefault()
+
+            alert('Hello world!');
+
+            getAllBooks();
+        })
+
+        btnAdicionar.addEventListener("click", (e) => {
+            e.preventDefault()
+
+            createBook();
+        })
     </script>
 </body>
 </html>

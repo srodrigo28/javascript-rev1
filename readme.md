@@ -5,7 +5,7 @@
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-datas/aula/1/subaula/1
 ```
 
-* [2] Trabalhando com datas *** starting ***
+* [2] Trabalhando com datas *** finish show ***
 ```
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-funcoes/aula/1/subaula/1
 ```
@@ -20,7 +20,7 @@ https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-manipulando-formu
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-tratamento-de-erros/
 ```
 
-* [5] Trabalhando com local storage *** starting ***
+* [5] Trabalhando com local storage *** finish warning ***
 ```
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-armazenamento-no-navegador/
 ```

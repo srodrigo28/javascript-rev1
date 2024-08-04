@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação</title>
+</head>
+<body>
+    <h1>Validação</h1>
+
+    <form name="myForm">
+        <input type="text" id="email" placeholder="email">
+        <input type="text" id="senha" placeholder="senha">
+        <br>
+        <button id="btn"> Entrar</button>
+    </form>
+
+    <script>
+        // const myForm = document.forms.myForm
+        const btn = document.getElementById('btn')
+
+        function cadastrar(){
+            const email = document.querySelector('#email').value = 'maria@gmail.com'
+            const senha = document.querySelector('#senha').value = '123456'
+
+            const user = { email, senha }
+
+            localStorage.setItem('user', JSON.stringify(user))
+        }
+
+        function login(){
+            const userData = JSON.parse(localStorage.getItem('user'))
+
+            console.log(localStorage.getItem('user'))
+            console.log(userData)
+
+            console.log(userData.email)
+            console.log(userData.senha)
+
+            if(userData.email == 'maria@gmail.com'){ }
+            if(userData.senha == '123'){ }
+            alert('Senha bem vindo' + email)
+        }
+        
+        btn.addEventListener("click", function(e) {
+            e.preventDefault()
+
+            const email = document.querySelector('#email')
+            const senha = document.querySelector('#senha')
+
+            if( !email.value ){
+                alert('Preencher o email')
+                return false;
+            }else if( !senha.value ){
+                alert('Preencher a senha')
+                return;
+            }
+
+            alert('Passou')
+
+            cadastrar()  
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+</head>
+<body>
+    
+    <form name="form">
+        <input type="text" name="nome" placeholder="nome"   value="teste nome" minlength="8">
+        <input type="text" name="email" placeholder="email" value="teste email" minlength="8">
+        <input type="text" name="senha" placeholder="senh"  value="teste senha" minlength="6">
+
+        <p>sexo</p>
+        <select name="sexo" value="sexo">
+            <option value="feminino">feminino</option>
+            <option value="masculino">masculino</option>
+        </select>
+
+        <br> <br>
+        <fieldset>
+            <legend>Habilidades</legend>
+
+            <label for="html">html</label>
+            <input type="checkbox" checked name="html" id="html">
+
+            <label for="css">css</label>
+            <input type="checkbox" name="css" id="css">
+
+            <label>javascript</label>
+            <input type="checkbox" checked name="javascrit">
+        </fieldset>
+
+        <br><br>
+
+        <fieldset>
+            <legend>preferência</legend>
+
+            <input type="radio" name="habilidade" id="web">
+            <label for="web">web</label> <br>
+
+            <input type="radio" name="habilidade" id="mobile" value="">
+            <label for="mobile">mobile</label> <br>
+            
+            <input type="radio" name="habilidade">
+            <label>backend</label> <br>
+        </fieldset>
+    </form>
+
+    <script>
+        const myForm = document.forms.form
+        const nome = myForm.nome
+        const email = myForm.email
+        const senha = myForm.senha
+        const sexo = myForm.sexo
+        const html = myForm.html
+        const hab = myForm.habilidade
+
+        // console.log(nome.value)
+        // console.log(email.value)
+        // console.log(senha.value)
+        // console.log(sexo.value)
+        // console.log('' + html.value)
+        // console.log('selecionado: ' + hab.value)
+
+        console.log(myForm)
+
+    </script>
+</body>
+</html>
