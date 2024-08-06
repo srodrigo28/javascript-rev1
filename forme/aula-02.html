@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+</head>
+<body>
+    
+    <h1>Javascript</h1>
+
+    <input type="text" placeholder="nome">
+    <p id="">  </p>
+
+    <script>
+
+        var h1 = document.querySelector('h1')
+        var input = document.querySelector('input');
+
+        input.onchange = function(e) {
+            e.preventDefault()
+            
+            // Alterando o texto do h1
+            alert('Clicou no título!');
+
+            // Alterando o texto do h1
+            h1.textContent = 'Super Javascript';
+
+            input.value = ''
+        }
+
+        /** opção 1
+        h1.onclick = function() {
+            alert('Clicou no título!');
+
+            // Alterando o texto do h1
+            h1.textContent = 'Super Javascript';
+        }
+        */
+
+        /** opção 2
+        h1.addEventListener("auxclick", function(e){
+            e.preventDefault()
+
+            h1.textContent = 'Super Javascript 2';
+        })
+        */
+
+        /** opção mouse 1
+        h1.onmouseout  = function() {
+            h1.textContent = 'Super Javascript';
+        }
+        */
+       /** opção mouse 2
+        h1.onmouseover  = function(e) {
+            e.preventDefault()
+
+            h1.textContent = 'Super Javascript 2';
+        }
+        */
+        
+        /** opção mouse 3 mouseover
+        h1.addEventListener("mouseover", function(e){
+            e.preventDefault()
+
+            h1.textContent = 'Super Javascript 2';
+        })
+        */
+
+        /** opção mouse 4 mouseup
+        h1.addEventListener("mouseup", function(e){
+            e.preventDefault()
+
+            h1.textContent = 'Super Javascript 2';
+        })
+        */
+
+        /** opção mouse 5 mousemove
+        h1.addEventListener("mousemove", function(e){
+            e.preventDefault()
+
+            h1.textContent = 'Super Javascript 2';
+        })
+        */
+
+        /** opção mouse 6 mousemove
+        h1.addEventListener("mouseleave", function(e){
+            e.preventDefault()
+
+            h1.textContent = 'Super Javascript 2';
+        })
+        */
+
+        /** opção mouse 6 mouseenter
+        h1.addEventListener("mouseenter", function(e){
+            e.preventDefault()
+
+            h1.textContent = 'Super Javascript 2';
+        })
+        */
+    </script>
+</body>
+</html>

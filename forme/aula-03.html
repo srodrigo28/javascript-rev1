@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+</head>
+<body>
+    
+    <h1>Javascript</h1>
+
+    <input type="text" placeholder="nome" id="nome">
+    <input type="text" placeholder="e-mail" id="email">
+    <p id="rs"> </p>
+
+    <script>
+
+        var h1 = document.querySelector('h1')
+        var rs = document.querySelector('#rs')
+        var email = document.querySelector("#email")
+
+        email.onchange = () => {
+            alert('Clicou no título!');
+
+            // Alterando o texto do h1
+            h1.textContent = 'Super Javascript';
+        }
+
+        /*** 
+        input.onchange = function(e) {
+            e.preventDefault()
+
+            // Alterando o texto do h1
+            alert('Saiu alterou');
+
+            // Alterando o texto do h1
+            h1.textContent = 'Super Javascript';
+
+            if(!input.value){
+                // rs.textContent = 'preencher o campo'
+                rs.innerHTML = "<span class='error'> preencher o campo </span>"
+                return false;
+            }
+
+            if(!input.value.includes('@')){
+                // rs.textContent = 'preencher o campo'
+                rs.innerHTML = "<span class='warning'> e-mail inválido! </span>"
+                return false;
+            }
+
+            if(input.value){
+                // rs.textContent = 'sucesso !'
+                rs.innerHTML = "<span class='success'> sucesso! </span>"
+                return false;
+            }
+        }
+        */
+    </script>
+
+    <style>
+        .error{
+            width:10%;
+            padding: 5px 10px;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: red;
+        }
+
+        .warning{
+            width:10%;
+            padding: 5px 10px;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: yellow;
+        }
+
+        .success{
+            width: 10%;
+            padding: 5px 10px;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: green;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04</title>
+</head>
+<body>
+    
+    <h1>Javascript</h1>
+
+    <input type="text" placeholder="nome" id="nome">
+    <p id="rs_nome"> </p>
+
+    <input type="text" placeholder="e-mail" id="email">
+    <p id="rs_email"> </p>
+
+    <input type="text" placeholder="*********" id="senha">
+    <p id="rs_senha"> </p>
+
+    <script>
+
+        var h1 = document.querySelector('h1')
+
+        var nome = document.querySelector('#nome')
+        var rs_nome = document.querySelector('#rs_nome')
+
+        var email = document.querySelector("#email")
+        var rs_email = document.querySelector('#rs_email')
+
+        var senha = document.querySelector("#senha")
+        var rs_senha = document.querySelector('#rs_senha')
+
+        let status = 0;
+
+        nome.onchange = () => {
+            
+            if ( !nome.value.trim() ) {
+                rs_nome.innerHTML = "Nome inválido"
+                rs_nome.classList.add('error')
+            } else {
+                rs_nome.classList.remove('error')
+                rs_nome.innerHTML = "Nome valido"
+                rs_nome.classList.add('success')
+
+                status = status + 1;
+
+                h1.textContent = "Validado 1"
+            }
+        }
+
+        email.onchange = () => {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                rs_email.innerHTML = "E-mail inválido"
+                rs_email.classList.add('error')
+            } else {
+                rs_email.classList.remove('error')
+                rs_email.innerHTML = "E-mail valido"
+                rs_email.classList.add('success')
+
+                status = status + 1;
+                h1.textContent = "Validado 2"
+            }
+        }
+
+        senha.onchange = (e) => {
+            e.preventDefault();
+
+            if ( !senha.value.trim() ) {
+                rs_senha.innerHTML = "Nome inválido"
+                rs_senha.classList.add('error')
+            } else if( senha.value.length <= 6 ) {
+                rs_senha.innerHTML = "Precisa no minimo 6 digitos erro :("
+                rs_senha.classList.add('error')
+            }else{
+                rs_senha.classList.remove('error')
+                rs_senha.innerHTML = "Senha sucesso"
+                rs_senha.classList.add('success')
+
+                h1.textContent = "Validado 3 + final"
+
+                status = status + 1;
+                console.log(status)
+                console.log("sucesso final")
+            }
+        }
+    </script>
+
+    <style>
+        .error{
+            margin-top: 2px;
+            width:30%;
+            color: red;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .warning{
+            width:10%;
+            padding: 5px 10px;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: yellow;
+        }
+
+        .success{
+            margin-top: 2px;
+            width:30%;
+            color: green;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+    </style>
+</body>
+</html>
