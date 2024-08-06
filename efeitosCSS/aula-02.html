@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+</head>
+<body>
+    <div class="triangle"></div>
+    <p class="olho"></p>
+
+    <style>
+        body{
+            position: relative;
+        }
+       .olho{
+            top: 17%;
+            right: 93%;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: black;
+            visibility: hidden;
+        }
+
+        .triangle {
+            width: 0px;
+            height: 0px;
+            margin-left: 50px;
+            border-style: solid;
+            border-width: 100px 100px 200px 100px;
+            border-color: transparent transparent blue transparent;
+            transform: rotate(0deg);
+            transition: .7s;
+            cursor: pointer;
+
+            animation: myTriangulo 5s infinite;
+        }
+        .triangle:hover{
+            rotate: -90deg;
+            border-radius: 50%;
+            background-color: yellow;
+            border-color: transparent transparent white transparent;
+        }
+
+        @keyframes myTriangulo {
+            from {left: 0px;}
+            to   {left: 800px;}
+        }
+    </style>
+
+    <script>
+        var olho = document.querySelector(".olho")
+        var triangle = document.querySelector(".triangle")
+        var elemento = document.querySelector("div")
+
+        elemento.addEventListener("mouseover", function(e) {
+            e.preventDefault();
+
+           //  alert("oi")
+            olho.style.visibility = "visible"
+
+            setTimeout(() => {
+                olho.style.visibility = "hidden"
+            }, "1000");
+        })
+    </script>
+</body>
+</html>
