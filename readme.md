@@ -25,7 +25,7 @@ https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-tratamento-de-err
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-armazenamento-no-navegador/
 ```
 
-* [6] Trabalhando com Erros *** requisições http api ***
+* [6] Trabalhando com htt *** requisições http api ***
 ```
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-requisicoes-http/aula/1/subaula/1
 ```

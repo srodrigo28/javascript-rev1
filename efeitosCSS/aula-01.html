@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="./pages/lulu.html">
+                    <h3>Lulu</h3>
+                    <img src="./image/pomerania2.jpg" width="70" alt="">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div></div>
+    <p class="triangle"></p>
+
+    <style>
+        nav{
+            margin-top: 50px;
+        }
+        a{
+            gap: 10px;
+            display: flex;
+        }
+        img{
+            transition: .7s;
+        }
+        img:hover{
+            margin-left: 30px;
+            border-radius: 50%;
+            rotate: 360deg;
+            transform: scale(2);
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: red;
+            position: relative;
+            animation: mymove 5s infinite;
+        }
+        @keyframes mymove {
+            from {left: 0px;}
+            to   {left: 300px;}
+        }
+
+        .triangle {
+            width: 0px;
+            height: 0px;
+            margin-left: 50px;
+            border-style: solid;
+            border-width: 100px 100px 100px 100px;
+            border-color: transparent transparent blue transparent;
+            transform: rotate(0deg);
+            transition: .7s;
+            cursor: pointer;
+
+            animation: myTriangulo 5s infinite;
+        }
+        .triangle:hover{
+            rotate: 180deg;
+            border-radius: 50%;
+            background-color: yellow;
+            border-color: transparent transparent blue transparent;
+        }
+
+        @keyframes myTriangulo {
+            from {left: 0px;}
+            to   {left: 800px;}
+        }
+    </style>
+</body>
+</html>
