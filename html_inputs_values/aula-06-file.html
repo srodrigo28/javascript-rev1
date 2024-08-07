@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 6 File</title>
+</head>
+<body>
+
+    <input 
+        multiple 
+        type="file" 
+        accept=".txt" 
+        onchange="handleFile()"
+    /> <br><br>
+
+    <input 
+        multiple 
+        type="file" 
+        accept=".txt" 
+        onchange="handleFile2(this)"
+    /> <br><br>
+
+    <input 
+        multiple 
+        type="file" 
+        accept=".txt" 
+        onchange="handleFile3(this)"
+    />  <br><br>
+    <script>
+
+        // opção 1
+        function handleFile(){
+            const file = document.querySelector("input").files
+            console.log(file)
+        }
+
+        // opção 2
+        function handleFile2(input){
+            const file = input.files
+            console.log(file)
+        }
+
+        // opção 3 -- ler o conteúdo do arquivo
+        function handleFile3(input){
+            const file = input.files[0]
+            file.text().then(function (text){
+                console.log(text)
+            }) 
+        }
+
+        // opção 4 -- ler o conteúdo do arquivo
+        function handleFile4(input){
+            const file = input.files[0]
+            const render = new FileReader()
+
+            render.onload = () => {
+                const content = render.result
+                console.log(content)
+            }
+            render.readAsText(file);
+        }
+
+    </script>
+    
+</body>
+</html>

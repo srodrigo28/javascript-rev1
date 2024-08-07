@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7 File</title>
+</head>
+<body>
+    
+    <input type="file" accept=".txt" onchange="handleFile4(this)" />
+    <br><br>
+    <textarea rows="10" cols="18" > </textarea>
+    <br>
+    <button onclick="saveFile1()">Save</button>
+    
+    <script>
+        // opção 4 -- ler o conteúdo do arquivo
+        function handleFile4(input){
+            const file = input.files[0]
+            const render = new FileReader()
+
+            render.onload = () => {
+                const content = render.result
+                document.querySelector('textarea').textContent = content
+                console.log(content)
+            }
+            render.readAsText(file);
+        }
+
+        function saveFile1(){
+            const textArea = document.querySelector('textarea')
+            
+            const blob = new Blob([textArea], {
+                type: "text/plain;charset=utf-8",
+            })
+
+           const url = URL.createObjectURL(blob)
+           const link = document.createElement("a")
+
+           link.setAttribute("href", url)
+           link.setAttribute("download", 'edited-file.txt')
+           link.click()
+        }
+
+        function saveFile2(){
+            const textArea = document.querySelector('textarea')
+            const content = textArea.value
+            const blob = new Blob([content], {type: 'text/plain'})
+            const fileName = 'arquivo.txt'
+            const link = document.createElement('a')
+            link.href = URL.createObjectURL(blob)
+            link.download = fileName
+            link.click()
+        }
+
+    </script>
+    
+</body>
+</html>

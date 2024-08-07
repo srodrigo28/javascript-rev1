@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 10 formularios</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <form>
+        <label for="email">E-mail</label><br>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="senha">E-mail</label><br>
+        <input type="senha" id="senha" name="senha"><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <script>
+        const myForm = document.querySelector("form")
+        const email = myForm.email;
+        const senha = myForm.senha;
+
+        myForm.addEventListener("submit", function(event){
+            event.preventDefault()
+
+            function validar(){
+                email.setCustomValidity("Preencher campo E-mail");
+                senha.setCustomValidity("Preencher campo senha");
+                
+                alert('fim validate')
+            }
+            
+            validar()
+        })
+
+    </script>
+    
+</body>
+</html>

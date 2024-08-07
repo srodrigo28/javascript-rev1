@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação</title>
+</head>
+<body>
+    <div class="container">
+        <div class="titulo">
+            <h2>Título</h2>
+        </div>
+        <p>
+            <input type="text">
+            <br><br>
+            Subtítulo: <span> </span>
+        </p>
+    </div>
+
+    <script>
+
+        const input = document.querySelector('input');
+        const rs = document.querySelector("span")
+
+        function tipo(){
+            console.log(typeof false)
+
+            alert('alterou 1...')
+        }
+
+        input.addEventListener("mouseup", function(e){
+            e.preventDefault();
+
+            alert('alterou 2...')
+
+            tipo()
+        })
+
+    </script>
+</body>
+</html>

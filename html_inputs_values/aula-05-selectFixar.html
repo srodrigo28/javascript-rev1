@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 5 Select fixar1</title>
+</head>
+<body>
+
+    <select id="my-select">
+        <option value="f">Feminino</option>
+        <option value="m" selected>Masculino</option>
+    </select>
+    <button onclick="Teste()"> Teste </button>
+
+    <script>
+
+        var mySelect = document.querySelector("#my-select")
+
+        function Teste(){
+
+            if(mySelect.value == "f"){
+                alert("Você escolheu feminino")
+                return false;
+            }
+
+            if(mySelect.value == "m"){
+                alert("Você escolheu masculino")
+                return false;
+            }
+        }
+
+        console.log("valor1: " + mySelect)
+        console.log("valor2: " + mySelect.selectedIndex)
+        console.log("valor3: " + mySelect.value)
+    </script>
+    
+</body>
+</html>

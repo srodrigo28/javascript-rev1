@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 3 Input</title>
+</head>
+<body>
+
+    <label for="">HTML5</label><br>
+    <input type="text" id="html" placeholder="html exemplo"><br><br>
+
+    <label for="">CSS3</label><br>
+    <input type="text" id="css" placeholder="css3 exemplo">
+
+    <script>
+        var myInput = document.querySelector("#html")
+        myInput.value = "alterado ..."
+
+        console.log("valor1: " + myInput)
+        console.log("valor2: " + myInput.value)
+    </script>
+    
+</body>
+</html>

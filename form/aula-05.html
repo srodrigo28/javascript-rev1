@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="nome"     ><br>
+        <input type="text" name="email"    ><br>
+        <input type="text" name="telefone" ><br>
+        <input type="text" name="senha"    ><br>
+
+        <button id="btn" >Enviar</button>
+    </form>
+
+    <script>
+        /** tag, data-atribuito, id, class*/
+        const form = document.querySelector("form")
+
+        const nome  =  form.nome;
+        const email =  form.email;
+        const tel   =  form.telefone;
+        const senha =  form.senha;
+
+        const btn = form.btn;
+
+        function validar(){
+            console.log(
+                `Nome: ${nome.value} \n`,
+                `Email: ${email.value} \n`,
+                `Telefone: ${tel.value} \n`,
+                `Senha: ${senha.value}`  // não é visível no console, mas é salvo no localStorage
+            )
+
+            alert('hello')
+        }
+
+        btn.addEventListener("click", function(e) {
+            e.preventDefault()
+
+            validar()
+
+            form.reset()
+        })
+
+    </script>
+</body>
+</html>

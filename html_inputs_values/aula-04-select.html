@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 4 Select</title>
+</head>
+<body>
+
+    <select id="my-select">
+        <option value="1-html">html</option>
+        <option value="2-css3">css3</option>
+        <option value="3-javascript" selected>javascript</option>
+    </select>
+
+    <script>
+        var mySelect = document.querySelector("#my-select")
+
+        console.log("valor1: " + mySelect)
+        console.log("valor2: " + mySelect.selectedIndex)
+        console.log("valor3: " + mySelect.value)
+    </script>
+    
+</body>
+</html>

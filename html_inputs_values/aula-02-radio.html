@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2 Input</title>
+</head>
+<body>
+
+    <input type="radio" id="html" name="html" >
+    <label for="">HTML5</label><br>
+
+    <input type="radio" id="css" name="html">
+    <label for="">CSS3</label><br>
+
+    <script>
+        var myRadio = document.querySelector("#html")
+        myRadio.checked = true
+
+        console.log("valor1: " + myRadio.checked)
+        console.log("valor2: " + myRadio)
+    </script>
+    
+</body>
+</html>

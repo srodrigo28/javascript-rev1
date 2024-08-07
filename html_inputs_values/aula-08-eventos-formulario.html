@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 08 formularios</title>
+</head>
+<body>
+
+    <form>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email">
+
+        <label for="senha">E-mail</label>
+        <input type="senha" id="senha" name="senha">
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <script>
+        const myForm = document.querySelector("form")
+        // console.log(myForm)
+
+        /** seleciona todo formulario
+        myForm.addEventListener("submit", function(event){
+            event.preventDefault() // para não recarregar a página ao enviar o formulário
+
+            console.log(event)
+        })
+        */
+
+        /** pegando um valor especifico do formulario */
+        myForm.addEventListener("submit", function(event){
+            event.preventDefault() // para não recarregar a página ao enviar o formulário
+            
+            const email = document.querySelector("#email").value
+            const senha = document.querySelector("#senha").value
+
+            console.log(email)
+        })
+    </script>
+    
+</body>
+</html>

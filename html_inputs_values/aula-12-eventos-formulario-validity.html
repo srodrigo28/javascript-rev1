@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 12 formularios</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <form>
+        <label for="email">E-mail</label><br>
+        <input type="text" name="email" placeholder="email@.com"><br><br>
+
+        <label for="senha">Senha</label><br>
+        <input type="password" name="senha" placeholder="**********"><br><br>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <script>
+        const myForm = document.querySelector("form")
+        const email = myForm.email;
+        const senha = myForm.senha;
+
+        myForm.addEventListener("submit", function(event){
+            event.preventDefault()
+
+            function validar(){
+
+                if(email.value == ""){
+                email.setCustomValidity("E-mail é obrigatório !")
+                return false;
+
+                }else if(!email.value.match(/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i)) {
+                    email.setCustomValidity("E-mail inválido !")
+                    return false;
+
+                }else if(senha.value == ""){
+                    senha.setCustomValidity("Senha é obrigatório")
+                    return false;
+
+                }else if(senha.value.length < 6){
+                    senha.setCustomValidity("Senha é menor que 6 caracteres")
+                    return false;
+                }else{
+                    alert("Formulário enviado com sucesso!")
+                    email.value = ""
+                    senha.value = ""
+                    email.setCustomValidity("")
+                    senha.setCustomValidity("")
+                }
+            }
+
+            validar()
+        })
+
+    </script>
+    
+</body>
+</html>
