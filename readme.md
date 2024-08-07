@@ -20,12 +20,12 @@ https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-manipulando-formu
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-tratamento-de-erros/
 ```
 
-* [5] Trabalhando com local storage *** finish warning ***
+* [5] Trabalhando com local storage *** finish ***
 ```
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-armazenamento-no-navegador/
 ```
 
-* [6] Trabalhando com htt *** requisições http api ***
+* [6] Trabalhando com htt *** requisições http api  finish***
 ```
 https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-requisicoes-http/aula/1/subaula/1
 ```
