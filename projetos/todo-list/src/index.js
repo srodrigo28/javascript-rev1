@@ -1,3 +1,3 @@
-import { dragCardEvents, calcular } from "./events/dragCardEvents.js"
+import { dragCardEvents } from "./events/dragCardEvents.js"
 
 dragCardEvents()

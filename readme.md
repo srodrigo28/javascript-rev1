@@ -39,7 +39,7 @@ https://www.treinaweb.com.br/painel/direto-ao-ponto/javascript-trabalhando-com-r
 https://www.treinaweb.com.br/painel/cursos/javascript-fundamentos/aula/2/subaula/4
 ```
 
-* [8] Projeto ToDo Javascript *** staringg ***
+* [8] Projeto ToDo Javascript *** starting ***
 ```
 https://www.treinaweb.com.br/painel/projetos-praticos/javascript-aplicacao-de-gerenciamento-de-tarefas-integrada-com-api/aula/2/subaula/1
 ```
