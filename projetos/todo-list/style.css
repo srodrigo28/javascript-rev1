@@ -51,20 +51,26 @@ img:hover{
     align-items: center;
     padding: 0 10px;
 }
+.new-header button{
+    border-radius: 50%;
+}
 .new-header i{
+    color: #fff;
+    font-size: 25px;
     cursor: pointer;
     transition: .9s;
 }
 .new-header i:hover{
     color: darkviolet;
-    font-size: 1.2em;
+    border: 3px solid greenyellow;
+    border-radius: 50%;
+    font-size: 2em;
     transform: rotate(360deg);
 }
-
 /* cards*/
 .cars-container{
     margin-top: 5px;
-    height: 700px;
+    height: 600px;
     background-color: #ffffff08;
     border-radius: 5px;
     padding: 10px;
@@ -102,9 +108,8 @@ button{
 }
 
 .card .status{
-    width: 15px;
-    height: 15px;
-    border-radius: 25%;
+    width: 30px;
+    height: 30px;
     display: inline-block;
     background-color: blue;
     transition: .9s;
@@ -139,21 +144,22 @@ button{
     position: absolute;
     cursor: pointer;
     transition: .9s;
-    color: #272727;
+    color: #fff;
     padding: 3px;
     border-radius: 50px;
 
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 
-    left: 90%;
+    left: 85%;
     bottom: 5px;
     
 }
-.card .delete-item:hover{     
-    color: red;
-    width: 30px;
-    height: 30px;
+.card .delete-item:hover{
+    width: 35px;
+    height: 35px;
+    border: 4px solid #fff;    
+    background-color: red;
     transform: rotate(360deg);
 }
 
@@ -165,18 +171,4 @@ button{
 }
 .FINISHED .card .status{
     background-color: green;
-}
-
-footer{
-    width: 97%;
-    height: 80px;
-    margin: 0 auto;
-
-    border-radius: 10px;
-    padding: 25px 15px;
-
-    transition: .9s;
-    border: solid 1px #000;
-    background-color: #272727;
-    box-shadow: 2px 2px 5px #00000078;
 }
