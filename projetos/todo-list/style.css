@@ -68,7 +68,7 @@ img:hover{
     transform: rotate(360deg);
 }
 /* cards*/
-.cars-container{
+.cards-container{
     margin-top: 5px;
     height: 600px;
     background-color: #ffffff08;

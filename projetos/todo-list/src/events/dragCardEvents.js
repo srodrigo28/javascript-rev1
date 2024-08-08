@@ -6,6 +6,7 @@ function dragCardEvents(){
         card.setAttribute("data-card-index", index)
         card.addEventListener("dragstart", dragStart)
 
+        setupDragAndDrop()
     })
 }
 
@@ -16,25 +17,22 @@ function dragStart(event){
 
 function setupDragAndDrop(){
     const cardsContainer = document.querySelectorAll('.cards-container')
-
     cardsContainer.forEach(cardDrop => {
         cardDrop.addEventListener("dragover", function(event){
             event.preventDefault()
         })
-        dragArea(cardDrop)
+        dropArea(cardDrop)
     })
 }
 
-function dragArea(cardDrop) {
+function dropArea(cardDrop) {
     cardDrop.addEventListener("drop", (event) => {
         event.preventDefault()
 
         const cardIndex = event.dataTransfer.getData("text/plain")
         const draggedCard = document.querySelector(`.card[data-card-index="${cardIndex}"]`)
         cardDrop.appendChild(draggedCard)
-
     })
 }
 
-
-export {dragCardEvents};
+export { dragCardEvents };
