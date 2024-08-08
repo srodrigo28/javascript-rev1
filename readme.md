@@ -1,4 +1,8 @@
 #### Projeto revisão javascript
+* Importante Plno Treina Web
+```
+  https://www.treinaweb.com.br/checkout/pagamento/plano/anual/recorrente?cupom=TW-RELAGO24&forma=boleto_recorrente
+```
 
 * [1] Trabalhando com datas *** finish ***
 ```
