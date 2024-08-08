@@ -7,11 +7,10 @@
 </head>
 <body>
     <form>
-        <input type="text" name="nome"     ><br>
-        <input type="text" name="email"    ><br>
-        <input type="text" name="telefone" ><br>
-        <input type="text" name="senha"    ><br>
-
+        <input type="text" name="nome"     placeholder="nome completo">
+        <input type="text" name="email"    placeholder="email">
+        <input type="text" name="telefone" placeholder="telefone">
+        <input type="text" name="senha"    placeholder="*********">
         <button id="btn" >Enviar</button>
     </form>
 
@@ -46,5 +45,23 @@
         })
 
     </script>
+
+    <style>
+        body{
+            background-color: #272727;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        input{
+            outline: 0;
+            border: none;
+            padding: 7px;
+            border-radius: 7px;
+            background-color: #91919191;
+        }
+    </style>
 </body>
 </html>
