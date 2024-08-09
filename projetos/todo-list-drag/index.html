@@ -2,7 +2,9 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo v2</title>
 </head>
@@ -12,21 +14,17 @@
             <h1>Board</h1>
         </header>
         <section class="columns">
-            <div class="column">
-                <h2 class="column__title">To Do</h2>
-                <section class="column__cards column--highlight">
-                    <section class="card">
-                        <h3>Pagar energia</h3>
-                    </section>
-                </section>
+            <div class="column__cards">
+                <h2 class="column__title">Para Iniciar</h2>
+                <section class="column__cards"></section>
             </div>
-            <div class="column">
-                <h2 class="column__title">To DO</h2>
-                <section class="clumn__cards">
-                    <section class="card">
-                        <h3>Pagar energia</h3>
-                    </section>
-                </section>
+            <div class="column__cards">
+                <h2 class="column__title">Fazendo ...</h2>
+                <section class="column__cards"></section>
+            </div>
+            <div class="column__cards">
+                <h2 class="column__title">Feito</h2>
+                <section class="column__cards"></section>
             </div>
         </section>
     </main>
