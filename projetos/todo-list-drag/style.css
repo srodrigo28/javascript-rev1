@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    user-select: none; /* novo */
+}
+header > h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #6b778c;
+    /* letter-spacing: 0.9rem; */
+}
+header > h1{
+    color: #182b4d;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.columns{
+    gap: 15px;
+    display: flex;
+    margin-top: 50px;
+}
+.column{
+    padding: 10px;
+    width: 100%;
+    min-height: 70dvh;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #f4f5f7;
+}
+.column__title{
+    color: #4d5c76;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 10px;
+}
+.column__cards{ /** AREA DOS CARDS */
+    padding: 4px;
+    height: 90%;
+}
+section .card{
+    width: 100%;
+    min-height: 70px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #dfe1e6;
+    box-shadow: 0 2px 2px #dfe1e6;
+    padding: 12px 14px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #4d5c76;
+}
+
+.column--highlight{
+    border-radius: 5px;
+    background-color: #62ef256f;
+    border: 2PX solid #6ce310;
+}
