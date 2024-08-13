@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prog javascript</title>
+</head>
+<body>
+    <input type="file" name="inputfile" id="inputfile">
+    <br>
+    <pre id="output"></pre>
+    <script type="text/javascript">
+        document.getElementById('inputfile')
+                .addEventListener('change', function() {  
+                    var fr=new FileReader();
+                    fr.onload=function(){
+                        document.getElementById('output').textContent=fr.result;
+                }  
+            fr.readAsText(this.files[0]);
+        })
+    </script>
+</body>
+</html>
