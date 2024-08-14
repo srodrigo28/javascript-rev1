@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 04 Criando elementos</title>
+    <style>
+        .container1{
+            color: #fff;
+            background-color: black;
+        }
+        .container2{
+            color: #fff;
+            background-color: red;
+        }
+        .container3{
+            color: #fff;
+            background-color: green;
+        }
+        button{
+            border: 0;
+            font-weight: 500;
+            border-radius: 10px;
+            color: cadetblue;
+            padding: 30px 40px;
+            transition: .7s;
+            margin: 10px;
+            
+            box-sizing: border-box;
+        }
+        button:hover{
+            color: #fff;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 20px;
+            text-transform: capitalize;
+            background-color: tomato;
+            border: 10px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">tema 1</button>
+    <button id="btn2">tema 2</button>
+    <button id="btn3">tema 3</button>
+    <button id="btn4">conversar ?</button>
+
+    <div>
+        <span></span>
+        <p></p>
+    </div>
+    <script>
+        
+        const btn1 = document.querySelector("#btn1")
+        const btn2 = document.querySelector("#btn2")
+        const btn3 = document.querySelector("#btn3")
+        const btn4 = document.querySelector("#btn4")
+
+        const span = document.querySelector("span")
+        const p = document.querySelector("p")
+
+        var ctx = document.querySelector("body")
+        
+        setTimeout(() => {
+            ctx.classList.add('container3')
+            // span.innerText = 'Esse e um innerText'
+            span.textContent = 'Esse e um innerText'
+
+            setTimeout( () => {
+                span.innerHTML = "<h3>Esse e um innerHTML</h3>"
+            }, 3000)
+        }, 3000)
+        
+        btn1.onclick = () => {
+            ctx.classList.toggle('container1')
+        }
+        btn2.onclick = () => {
+            ctx.classList.toggle('container2')
+        }
+        btn3.onclick = () => {
+            ctx.classList.toggle('container3')
+        }
+        btn4.onclick = () => {
+            p.innerHTML = `
+                            <label>Qual seu nome ? <label>
+                            <input type="text" />
+                            <button>Enviar</button
+                        `
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 Criando elementos</title>
+</head>
+<body>
+    <input type="text" class="class-input"  id="nome">
+    <input id="btn" type="submit" value="">
+
+    <script>
+        const btn = document.querySelector("#btn")
+        const input = document.querySelector("input")
+
+        btn.removeAttribute('novo place holder')
+        btn.removeAttribute('type')
+
+        btn.setAttribute('placeholder', 'novo texto do placeholder')
+        btn.setAttribute('type', 'submit')
+        btn.setAttribute('value', 'cadastrar')
+        btn.setAttribute('onclick', 'print()')
+
+        function print(){
+            alert('Sucesso')
+        }
+
+        console.log('1 ' + btn.hasAttribute('placeholder'))
+        console.log('2 ' + btn.getAttribute('type'))
+        console.log('3 ' + btn.setAttribute('type', 'submit'))
+        
+        /**
+            btn.classList
+            btn.addEventListener
+
+            btn.removeChild
+            btn.removeAttribute
+            btn.removeEventListener
+            btn.removeAttributeNode
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05 Criando elementos</title>
+</head>
+<body>
+    <button id="btn4"> conversar ? </button>
+    <p></p>
+    <script>
+        const btn4 = document.querySelector("#btn4")
+
+        const p = document.querySelector("p")
+        /**
+            setTimeout(() => {
+                document.querySelector("body").innerHTML = "<h3>Esse e um innerHTML 1</h3>"
+                    setTimeout( () => {
+                        document.querySelector("body").innerHTML = "<h2>Esse e um innerHTML 2</h2>"
+
+                        setTimeout( () => {
+                            document.querySelector("body").innerHTML = "<h1>Esse e um innerHTML 3</h1>"
+                        }, 3000)
+                    }, 3000)
+
+            }, 3000)
+        */
+        btn4.onclick = (e) => {
+            e.preventDefault()
+
+            p.innerHTML = `
+                            <input type="text" />
+                            <label>Qual seu nome ? <label>
+                            <br><br>
+                            <input type="text" />
+                            <label>telefone ? <label>
+                            <br><br>
+                            <button>Enviar</button
+            
+                        `
+        }
+    </script>
+</body>
+</html>

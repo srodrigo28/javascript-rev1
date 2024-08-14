@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 Criando elementos</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            
+            transition: .7s;
+            background-color: darkviolet;
+        }
+        .novo{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <input id="btn" type="text">
+    <div></div>
+
+    <script>
+        
+        const btn = document.querySelector("#btn")
+
+        btn.setAttribute('type', 'button')
+        btn.setAttribute('value', 'click')
+        btn.setAttribute('onclick', 'toggle()')
+
+        var ctx = document.querySelector("div")
+        function toggle(){
+            ctx.classList.toggle('novo')
+        }
+    </script>
+</body>
+</html>
