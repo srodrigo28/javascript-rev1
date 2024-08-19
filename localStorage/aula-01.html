@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>a</h1>
+    <script>
+        var aulaAtual = "Aula 01 - LocalStorage";
+        var title = document.querySelector('title').textContent = aulaAtual;
+        var h1 = document.querySelector('h1').textContent = aulaAtual;
+
+        // cria um client
+        var client =  { nome: "Rodrigo", email: "rodolfo@gmail.com", idade: 28 }
+        var client1 =  { nome: "Rodrigo 2", email: "rodolfo2@gmail.com", idade: 32 }
+
+        // cria uma lista de client
+        const tempClient = [
+            {
+                nome: "Rodrigo",
+                email: "rodolfo@gmail.com",
+                idade: 28
+            },
+            {
+                nome: "Maria",
+                email: "maria@gmail.com",
+                idade: 30
+            },
+            {
+                nome: "João",
+                email: "joao@gmail.com",
+                idade: 32
+            }
+        ]
+
+        const getLocalStorage = () => JSON.parse(localStorage.getItem('')) ?? []
+        const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.stringify(dbClient))
+
+        // cria ler clientes
+        const readClient = () => getLocalStorage() 
+
+        // cria gravar clientes
+        const createClient = (client) =>{
+            const dbClient = getLocalStorage()
+            dbClient.push(client)
+            setLocalStorage(dbClient)
+        }
+        
+        // atualizando clientes
+        const updateClient = (client) => {
+            const dbClient = readClient()
+            dbClient[index] = client
+            setLocalStorage(dbClient)
+        }
+
+        // deletando clientes
+        const deleteClient = (index) => {
+            const dbClient = readClient()
+            dbClient.splice(index, 1)
+            setLocalStorage(dbClient)
+        }
+        
+        getLocalStorage();
+        setLocalStorage(tempClient);
+        
+        //updateClient(1, client)
+    </script>
+</body>
+</html>
