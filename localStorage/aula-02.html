@@ -8,6 +8,24 @@
 </head>
 <body>
     <h1>a</h1>
+
+    <div class="moda" id="modal">
+        <header class="modal-header">
+            <h2>Novo Cliente</h2>
+            <span class="modal-close" id="modalClose">X</span>
+        </header>
+        <form class="modal-form">
+            <input type="text" class="modal-field" placeholder="Nome do cliente">
+            <input type="text" class="modal-field" placeholder="E-mail do cliente">
+            <input type="text" class="modal-field" placeholder="Celular do cliente">
+            <input type="text" class="modal-field" placeholder="Cidade do cliente">
+        </form>
+        <footer class="modal-footer">
+            <button id="salvar">Cadastrar</button>
+            <button id="cancelar">Cadastrar</button>
+        </footer>
+    </div>
+
     <script>
         var aulaAtual = "Aula 02 - LocalStorage";
         var title = document.querySelector('title').textContent = aulaAtual;
@@ -63,10 +81,18 @@
             setLocalStorage(dbClient)
         }
         
-        getLocalStorage();
-        setLocalStorage(tempClient);
-        
-        //updateClient(1, client)
+        // funções
+        const isValidFields = () => {
+            const nome = document.querySelector('.modal-field[placeholder="Nome do cliente"]').value
+            console.log(nome)
+            return true
+        }
+        const saveClient = () => {
+            if(isValidFields()){
+                console.log("cadastrando clientes")
+            }
+        }
+        document.getElementById('salvar').addEventListener('click', saveClient)
     </script>
 </body>
 </html>

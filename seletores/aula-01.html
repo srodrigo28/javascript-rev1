@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principais Seletores</title>
+</head>
+<body>
+    <form class="modal-field">
+        <h1>Seletores de elementos </h1>
+        <input 
+            id="nome"
+            data-nome 
+            type="text"
+            name="name"
+            class="nome"
+            value="teste data-atribute"
+            placeholder="Nome do cliente" 
+        />
+        <button id="btn">Salvar</button>
+    </form>
+
+    <script> // script para interações de dados html e css
+
+        // selecionando o form
+        const form  = document.querySelector('form');
+        
+        // pegando valores por seletores
+        const ex1 = document.querySelector('[data-nome]').value
+        const ex2 = document.querySelector('[placeholder="Nome do cliente"]').value
+        const ex3 = document.querySelector('#nome').value
+        const ex4 = document.querySelector('.nome').value
+        const ex5 = document.querySelector('input').value
+        const ex6 = document.querySelector('button').textContent
+        const ex8 = document.querySelector('h1').textContent
+        const ex7 = form.name.value
+
+        // mostrando resultados
+        console.log("\n ex1: data-nome => " + ex1)
+        console.log("\n ex2: [placeholder='Nome do cliente'] => " + ex2)
+        console.log("\n ex3: seletor #id => " + ex3)
+        console.log("\n ex4: seletor .class => " + ex4)
+        console.log("\n ex5: seletor input => " + ex5)
+        console.log("\n ex6: seletor button => " + ex6)
+        console.log("\n ex7: seletor form.name => " + ex7)
+        console.log("\n ex8: seletor h1 => " + ex8)
+    </script>
+</body>
+</html>
