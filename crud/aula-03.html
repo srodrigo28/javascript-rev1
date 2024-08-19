@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Aula 03 Inserir</title>
+</head>
+<body>
+    <!-- justify-content-evenly, justify-content-end, justify-content-around, justify-content-start, justify-content-between-->
+    <!-- -->
+    <header class="container d-flex justify-content-around py-2 text-white bg-primary">
+        <h1>Aula 03 - Inserir</h1>
+    </header>
+    <h3 id="rs"></h3>
+    <form class="container">
+        <input type="text" id="categoria" placeholder="categoria" class="form-control">
+        <p id="is_categoria"></p>
+
+        <input type="text" id="descricao" placeholder="descricao" class="form-control">
+        <p id="is_descricao"></p>
+        <button class="btn btn-outline-primary">Inserir</button>
+    </form>
+
+    <script defer>
+        function validar(){
+            let rs = document.getElementById("rs")
+            let categoria = document.getElementById("categoria").value;
+            let descricao = document.getElementById("descricao").value;
+
+            let is_categoria = document.getElementById("is_categoria")
+            let is_descricao = document.getElementById("is_descricao")
+
+            if(!categoria){
+                is_categoria.textContent = "Preencha a categoria";
+                alert("Preencher o campo categoria") 
+                return false;
+            }else if(!descricao){
+                is_categoria.textContent = "";
+                is_descricao.textContent = "Preencha a descrição";
+                alert("Preencher o campo descrição") 
+                return false;
+            }
+
+            is_categoria.textContent = "";
+            is_descricao.textContent = "";
+            // categoria = "";
+            // descricao = "";
+
+            console.log('categoria: ' + categoria)
+            console.log('descrição: ' + descricao)
+
+            rs.textContent = "Descrição: sucesso";
+
+            alert("Função validar: sucesso") 
+            
+            inserir()
+        }
+        
+        function inserir(){
+            const url = "http://localhost:3000/categoria"
+
+            let nome = document.getElementById("categoria").value
+            let descricao = document.getElementById("descricao").value
+            
+            const categoria = {  nome,descricao }
+            
+            console.log("recebido os valores \n " + JSON.stringify(categoria))
+
+            fetch(url, {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(categoria)
+            })
+            return console.log(categoria)
+        }
+        /**
+                // onLoad
+                document.querySelector("#categoria").onchange = (event) => {
+                    event.preventDefault();
+                    alert("funciona onchange")
+                }
+
+                document.querySelector("#categoria").addEventListener("focusout", (event) => {
+                    event.preventDefault();
+                    alert("funciona onfocus")
+                });
+        */
+        document.querySelector("button").onclick = function(event){ 
+            event.preventDefault();
+            validar()
+        }
+    </script>
+</body>
+</html>
