@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach 01</title>
+</head>
+<body>
+
+    <ul id="people">
+        <li></li>
+    </ul>
+    
+    <script>
+        const ul = document.querySelector('ul')
+        const people3 = document.querySelector('#people').querySelectorAll('li')
+        const people1 = document.getElementById('people').getElementsByTagName('li')
+        const people2 = document.querySelector('#people').querySelector('li').textContent
+        console.log(people3)
+
+        const people = ['lucas', 'maria', 'joana', 'ana'];
+
+        people.forEach((person) => {
+            console.log(person)
+            const li = document.createElement('li')
+            li.textContent = person
+            ul.appendChild(li)
+        })
+    </script>
+</body>
+</html>
