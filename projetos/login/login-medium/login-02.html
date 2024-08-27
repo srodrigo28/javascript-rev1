@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <form>
+        <label for="email">E-mail</label> <br>
+        <input type="email" id="email" > <br><br>
+
+        <label for="password">Senha</label> <br>
+        <input type="password" id="password" > <br><br>
+
+        <button id="btn-entrar">Entrar</button>
+        <button>Cadastrar</button>
+    </form>
+
+    <script>
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const btnEntrar = document.querySelector('#btn-entrar');
+
+        function validar(){
+            // alert('funciona');
+            console.log('-------------- Validando E-mail & Password--------------')
+            console.log(emailInput.value)
+            console.log(passwordInput.value)
+        }
+        btnEntrar.addEventListener('click', function(event){
+            event.preventDefault();
+            validar();
+        });
+    </script>
+</body>
+</html>
