@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aulanaoseikkk</title>
+</head>
+<body>
+    <h1></h1>
+
+    <button id="btn-01">Testar 1</button>
+    <button id="btn-02" >Testar 2</button>
+    <button id="btn-03"> testar 3</button>
+    <button id="btn-04"> testar 4</button>
+
+    <ul>
+        <li id="linha-01">Anima1</li>
+        <li id="linha-02">Anima2</li>
+        <li id="linha-03">Anima3</li>
+    </ul>
+
+    <script>
+        var li = document.querySelector('#linha-01')
+        var h1 = document.querySelector('h1')
+
+        var btn1 = document.querySelector('#btn-01')
+        var btn2 = document.querySelector("#btn-02")
+        var btn3 = document.querySelector("#btn-03")
+        var btn4 = document.querySelector("#btn-04")
+
+        btn1.onclick = () => { 
+            document.querySelector('body').style.background="yellow"
+            document.querySelector('#btn-01').style.background="yellow"
+
+            document.querySelector('#btn-01').style.width="70px"
+            document.querySelector('#btn-01').style.height="70px"
+            document.querySelector('#btn-01').style.borderRadius="100%"
+        }
+
+        btn2.onclick = () => {
+            document.querySelector('body').style.background="blue"
+            document.querySelector('#btn-02').style.background="blue"
+
+            document.querySelector("#btn-02").style.width="70px"
+            document.querySelector("#btn-02").style.height="70px"
+            document.querySelector("#btn-02").style.borderRadius="100%"
+
+        }
+        btn3.onclick = () => {
+            document.querySelector("body").style.background="red"
+            document.querySelector("#btn-03").style.background="red"
+
+            document.querySelector("#btn-03").style.width="70px"
+            document.querySelector("#btn-03").style.height="70px"
+            document.querySelector("#btn-03").style.borderRadius="100%"
+
+
+        }
+        btn4.onclick =() => {
+           document.querySelector("body").style.background="green"
+           document.querySelector("#btn-04").style.background="green"
+
+
+        }
+
+        
+    </script>
+
+    <style>
+        body{
+            color: white;
+            background-color: black;
+        }
+        ul{
+            width: 100px;
+            list-style: none;
+        }
+        ul li{
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: .9s;
+        }
+        ul li:hover{
+            width: 100px;
+            height: 100px;
+            text-transform: uppercase;
+            margin: 10px;
+            font-weight: bold;
+            border-bottom-left-radius: 50px;
+            border-top-right-radius: 50px;
+            background-color: red;
+
+            transform: rotateY(360deg);
+        }
+    </style>
+</body>
+</html>
