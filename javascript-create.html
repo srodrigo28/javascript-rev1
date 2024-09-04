@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create 01</title>
+</head>
+<body>
+    
+    <script>
+
+            // Criando elementos;
+            var titulo = document.createElement("h1")
+            var form = document.createElement("form");
+            var inputNome = document.createElement("input");
+            var inputEmail = document.createElement("input");
+            var inputSenha = document.createElement("input");
+            var buttonCriar = document.createElement("button");
+
+            // Atribuindo valores e atributos para os elementos
+            titulo.setAttribute("class", "titulo-text")
+            titulo.textContent = "Esse é um titulo"
+
+            inputNome.setAttribute("class", "form-control")
+            inputNome.setAttribute("type", "input")
+            inputNome.setAttribute("placeholder", "Nome completo")
+
+            inputEmail.setAttribute("class", "form-control")
+            inputEmail.setAttribute("type", "email")
+            inputEmail.setAttribute("placeholder", "exemplo@mail.com")
+
+            inputSenha.setAttribute("class", "form-control")
+            inputSenha.setAttribute("type", "password")
+            inputSenha.setAttribute("placeholder", "****************")
+            
+            buttonCriar.setAttribute("class", "btn btn-primary")
+            buttonCriar.textContent = "Cadastrar";
+            buttonCriar.setAttribute("click", "criar()")
+
+            // Adicionando elementos no formulário
+            form.appendChild(inputNome);
+            form.appendChild(inputEmail);
+            form.appendChild(inputSenha);
+            form.appendChild(buttonCriar);
+            form.appendChild(inputNome);
+            form.appendChild(inputEmail);
+            form.appendChild(inputSenha);
+            form.appendChild(buttonCriar);
+
+            document.body.appendChild(form);
+        
+    </script>
+</body>
+</html>
