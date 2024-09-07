@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula Desafio</title>
+</head>
+<body>
+    <h3>Resultado: <strong id="entrada"></strong> <span>0</span></h3>
+    <input type="text" id="valor1" value="20">
+    <input type="text" id="valor2" value="20">
+    <button onclick="somar()"   >+</button>
+    <button onclick="dividir()" >/</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="mult()"    >*</button>
+
+    <script>
+        // 1.  Testes se null
+        var rs = document.querySelector("span");
+        var entrada = document.querySelector("#entrada")
+        var valor1 = document.querySelector('#valor1');
+        var valor2 = document.querySelector('#valor2');
+        var btn = document.querySelector('button');
+
+        // 2. Testes se null
+        console.log('testa se tem valores null ou undefined');
+        console.log(rs)
+        console.log(valor1)
+        console.log(valor2)
+        console.log(btn )
+
+        // 3. teste types iniciais
+        console.log('\n \n')
+        console.log('verifica os tipos:');
+        console.log("valor1 " + typeof valor1.value)
+        console.log("valor2 " + typeof valor2.value + '\n \n')
+
+        // 4. convertendo os inputs
+        console.log('converte os tipos:');
+        valor1 = parseInt(valor1.value)
+        valor2 = parseInt(valor2.value + '\n \n')
+
+        // 5. teste types convertidos
+        console.log("valor1 " + typeof valor1)
+        console.log("valor2 " + typeof valor2)
+
+        // 6. começa as funções
+        function somar()    {
+            entrada.textContent = `${valor1} + ${valor2} = `
+            resultado = valor1+valor2;
+            console.log(resultado)
+            rs.textContent = resultado;
+        }
+        function dividir()  {
+            entrada.textContent = `${valor1} / ${valor2} = `
+            resultado = valor1 / valor2;
+            console.log(resultado)
+            rs.textContent = resultado;
+         }
+        function mult()     {
+            entrada.textContent = `${valor1} * ${valor2} = `
+            resultado = valor1 * valor2;
+            console.log(resultado)
+            rs.textContent = resultado;
+        }
+        function subtrair() {
+            entrada.textContent = `${valor1} - ${valor2} = `
+            resultado = valor1 - valor2;
+            console.log(resultado)
+            rs.textContent = resultado;
+         }
+    </script>
+</body>
+</html>
